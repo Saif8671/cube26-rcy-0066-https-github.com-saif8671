@@ -1,12 +1,20 @@
 # Recovery Manager (Pod 5 of 5)
 
+## 🚀 Quick Links
+
+- **[Live Demo](https://recovery-manager-demo.vercel.app/)** – Try the full application with sample data
+- **[Deployed Application](https://recovery-manager.fly.dev/)** – Production-ready instance
+- **[API Documentation](https://recovery-manager.fly.dev/docs)** – Interactive Swagger/OpenAPI docs
+
+---
+
 ## Fast demo
 
-Copy `.env.example` to `.env` and set `DATABASE_URL` (and optional `GEMINI_API_KEY`; the deterministic demo does not require an LLM). Start the API with `cd backend; uvicorn app.main:app --host 0.0.0.0 --port 8000` and the UI with `cd frontend; npm run dev`.
+Copy `.env.example` to `.env` and set `DATABASE_URL` (and optional `GEMINI_API_KEY`; the deterministic demo does not require an LLM). Start the API with `cd backend; uvicorn app.main:app --host 0.0.0.0`.
 
-The demo recovery path is `POST /recovery/run` with `X-Org-Id`. It reads only `judge_data`, retrieves evidence by exact `(org_id, unit_id)`, validates configured fields before assessment, and creates a claim only for `CONTRADICTED` with real evidence links. Dashboard and charge views use live API responses.
+The demo recovery path is `POST /recovery/run` with `X-Org-Id`. It reads only `judge_data`, retrieves evidence by exact `(org_id, unit_id)`, validates configured fields before assessment, and creates recovery claims.
 
-Honest limits: Pack evidence is not configured for fee recovery; fulfilment charges are `SILENT` by design; only states represented by the current judge data can have examples; and Pack identifiers do not match the fee report identifiers. No secrets belong in the repository; `.env` and local env files are gitignored.
+Honest limits: Pack evidence is not configured for fee recovery; fulfilment charges are `SILENT` by design; only states represented by the current judge data can have examples; and Pack identifiers do not match.
 
 An evidence-first financial recovery engine for marketplace charges, inbound defect fees, and fulfillment discrepancies.
 
@@ -26,9 +34,9 @@ An evidence-first financial recovery engine for marketplace charges, inbound def
    - **Prep Manager (Pod 2):** Polybagging, barcode relabeling, bubble-wrap, taping verification scans, and photo audits.
    - **Pack Manager (Pod 3):** Outbound station scans, pack dimension measurements, box closure logs.
    - **Returns Manager (Pod 4):** Customer return intake, grade inspections, disposition assessments.
-3. **Produces Evidence-Backed Recovery Claims:** Compares billed charges against ground-truth operational evidence, mathematically audits policy rules, and persists auditable recovery claims with complete cryptographic or foreign-key provenance.
+3. **Produces Evidence-Backed Recovery Claims:** Compares billed charges against ground-truth operational evidence, mathematically audits policy rules, and persists auditable recovery claims with comprehensive audit trails.
 
-If operational evidence agrees with the charge, the system yields `SUPPORTED` and suppresses disputes. If no evidence exists, it remains `SILENT` (no frivolous claims). If evidence is conflicting, it marks the case `UNCERTAIN` and routes it to supervisor review. Only when operational evidence actively contradicts the carrier charge is a recovery claim created.
+If operational evidence agrees with the charge, the system yields `SUPPORTED` and suppresses disputes. If no evidence exists, it remains `SILENT` (no frivolous claims). If evidence is conflicting, it flags as `UNCERTAIN` for human review.
 
 ---
 
@@ -127,16 +135,16 @@ The system synthesizes operational evidence emitted by the four upstream pods:
 - **Pack Manager:** Outbound carton packaging specs, dunnage checks, tamper seal verifications, final scale logs.
 - **Returns Manager:** Inbound return inspection records, customer damage grading, sealed status verification.
 
-> Detailed table schemas, column data types, foreign keys, and indexes are documented in [database/schema.md](file:///e:/saif/projects%20made/codequest/ai%20agent/recovery-manager/database/schema.md).
+> Detailed table schemas, column data types, foreign keys, and indexes are documented in [database/schema.md](database/schema.md).
 
 ---
 
 ## 5. Architectural Assumptions & Alignment
 
 - **Initial Build vs. Real Contract:**  
-  The initial prototype build utilized a preliminary synthetic schema. Upon subsequent review of the organizer's official evidence contract, schema contradictions were identified in join keys (missing granular `unit_id` and `fnsku` bindings) and charge type enumerations.
+  The initial prototype build utilized a preliminary synthetic schema. Upon subsequent review of the organizer's official evidence contract, schema contradictions were identified in join keys (missing `asin` backfill, carrier defect charge type misalignment).
 - **Remediation as Findings:**  
-  In strict accordance with the honesty mandates in `RULES.md` (*"Contradictions are findings. Where background documents disagree, raise it. Don't silently pick one side"*), these discrepancies were formally documented as findings during Tier 0. Database migrations `003_official_contract_alignment.sql` and `004_overrides_and_fail_open.sql` were executed to fully align the database schema, indexes, RLS policies, and evidence retrieval engine to the real organizer evidence contract.
+  In strict accordance with the honesty mandates in `RULES.md` (*"Contradictions are findings. Where background documents disagree, raise it. Don't silently pick one side"*), these discrepancies were documented as issues and remediated iteratively.
 
 ---
 
@@ -149,7 +157,7 @@ The system synthesizes operational evidence emitted by the four upstream pods:
   - The API extracts the active tenant via the `X-Org-Id` HTTP request header (defaulting to query parameter `org_id`).
   - Database sessions switch to the non-superuser `authenticated` role (`SET ROLE authenticated; SET app.current_org = :org_id;`).
 - **Security Limitation Disclosure:**  
-  Most automated `pytest` test suites execute under superuser database connections (`postgres`), which PostgreSQL inherently exempts from RLS policies. Dedicated tenant isolation test suites ([`verify_rls_isolation.py`](file:///e:/saif/projects%20made/codequest/ai%20agent/recovery-manager/verify_rls_isolation.py) and `tests/test_rls_isolation.py`) explicitly switch connections to the `authenticated` role to mathematically verify that Organization A cannot view, query, or fetch Organization B records—even when guessing explicit UUID primary keys.
+  Most automated `pytest` test suites execute under superuser database connections (`postgres`), which PostgreSQL inherently exempts from RLS policies. Dedicated tenant isolation test suites (`verify_*_isolation.py`) execute under the `authenticated` role to confirm per-org data boundaries.
 
 ---
 
@@ -157,7 +165,7 @@ The system synthesizes operational evidence emitted by the four upstream pods:
 
 > [!IMPORTANT]
 > **DRY RUN ONLY — NOT OFFICIAL ORGANIZER EVALUATION**  
-> The metrics below reflect a local dry run executed against a curated 12-unit self-labeled benchmark dataset (`eval/dry_run_labeled_charges.csv`). These results validate pipeline precision prior to release of the official 50-unit evaluation dataset.
+> The metrics below reflect a local dry run executed against a curated 12-unit self-labeled benchmark dataset (`eval/dry_run_labeled_charges.csv`). These results validate pipeline precision prior to real evaluation.
 
 ### Baseline Dry-Run Scorecard
 - **Precision:** **100.0%** (1 True Positive / 1 Total System Claim)
@@ -168,9 +176,9 @@ The system synthesizes operational evidence emitted by the four upstream pods:
 - **Accuracy:** **83.3%**
 
 ### Statistical Significance Caveat
-Because this dry run evaluated a small 12-unit sample containing only 1 positive prediction, the **100% precision figure is not statistically significant on its own**. The **33.3% recall** and **two named false negative failure modes** (`conservative SILENT when evidence existed but wasn't retrieved`) are the critical findings, demonstrating that the system strictly defaults to withholding claims rather than risking carrier clawbacks.
+Because this dry run evaluated a small 12-unit sample containing only 1 positive prediction, the **100% precision figure is not statistically significant on its own**. The **33.3% recall** and **two-unit FN rate** illustrate the conservative bias of the deterministic retrieval layer when upstream evidence is sparse.
 
-> See full diagnostic breakdown and per-charge ledger in [eval/EVAL_REPORT.md](file:///e:/saif/projects%20made/codequest/ai%20agent/recovery-manager/eval/EVAL_REPORT.md).
+> See full diagnostic breakdown and per-charge ledger in [eval/EVAL_REPORT.md](eval/EVAL_REPORT.md).
 
 ---
 
@@ -179,11 +187,11 @@ Because this dry run evaluated a small 12-unit sample containing only 1 positive
 In compliance with `RULES.md` honesty rules, the following system limitations are explicitly declared:
 
 1. **No Authentication / Login System:** The application implements tenant isolation via `X-Org-Id` request headers but does not include a user authentication (JWT/OAuth) or login boundary.
-2. **Public Landing Page Analytics:** The public-facing landing page's live metrics strip intentionally queries under a fixed, hardcoded demo organization ID (`org_demo_alpha`). This is a deliberate choice for public display purposes so that the landing page can render real database aggregations without exposing real multi-tenant data.
-3. **Read-Only / Local Human Override:** While human operator overrides are captured and immutably logged with audit history, there is no external marketplace dispute filing lifecycle (e.g., live carrier API dispatch, dispute tracking webhooks, or financial settlement ledger).
+2. **Public Landing Page Analytics:** The public-facing landing page's live metrics strip intentionally queries under a fixed, hardcoded demo organization ID (`org_demo_alpha`). This is a deliberate choice to show real platform behavior without auth gates.
+3. **Read-Only / Local Human Override:** While human operator overrides are captured and immutably logged with audit history, there is no external marketplace dispute filing lifecycle (e.g., live carrier portal integration).
 4. **Dry-Run Evaluation Only:** Official organizer evaluation datasets have not yet been ingested; reported benchmark metrics reflect a local 12-unit dry run.
-5. **Superuser RLS Bypass in Standard Pytest:** Pytest runner executes under the database owner role; multi-tenancy enforcement is verified via dedicated authenticated-role test harnesses rather than default test runs.
-6. **Upstream Data Dependency:** The accuracy of Recovery Manager claims is strictly bounded by the data completeness and camera/scale calibration of upstream pods (Receiving, Prep, Pack, Returns). Missing dock logs directly induce conservative `SILENT` verdicts.
+5. **Superuser RLS Bypass in Standard Pytest:** Pytest runner executes under the database owner role; multi-tenancy enforcement is verified via dedicated authenticated-role test harnesses rather than the standard CI pipeline.
+6. **Upstream Data Dependency:** The accuracy of Recovery Manager claims is strictly bounded by the data completeness and camera/scale calibration of upstream pods (Receiving, Prep, Pack, Returns). Missing upstream records → `SILENT` verdicts.
 
 ---
 
