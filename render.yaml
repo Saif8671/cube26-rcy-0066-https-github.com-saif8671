@@ -3,7 +3,7 @@ services:
     name: recovery-manager-api
     runtime: python
     plan: free
-    rootDir: ai agent/recovery-manager/backend
+    rootDir: ai-agent/recovery-manager/backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
