@@ -1,0 +1,3 @@
+evidence_id,source_manager,shipment_id,order_id,sku,asin,evidence_type,evidence_content,evidence_timestamp
+EVD-TEST-CSV-01,Prep,FBA17Z88Y12,111-2000001-0000001,TECH-CABLE-01,B08N5WRWNW,packaging_audit,"{""label_verified"": true, ""barcode_type"": ""FNSKU""}",2026-03-15T08:30:00Z
+EVD-TEST-CSV-02,Pack,FBA17Z88Y13,111-2000001-0000002,TECH-STAND-02,B07XJ8C8F5,carton_weight_check,"{""measured_weight_lb"": 2.15, ""station_id"": ""ST-03""}",2026-03-15T09:45:00Z

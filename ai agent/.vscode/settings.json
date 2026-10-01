@@ -1,0 +1,12 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/recovery-manager/backend",
+    "${workspaceFolder}/recovery-manager"
+  ],
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/recovery-manager/backend",
+    "${workspaceFolder}/recovery-manager"
+  ]
+}
+

@@ -1,0 +1,207 @@
+[01] FEE-0002-1   | UNIT-0002  | fee_report           | fulfilment_fee_weight_tier       | $4.25  | qty=1
+     RCV RCV-0002: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0002: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=on_seam, orig_cov=yes, hnd(req=fragile, obs=all_present), exp(req=False, obs=not_required)
+[02] FEE-0003-1   | UNIT-0003  | inventory_adjustment | lost_inbound                     | $0.00  | qty=1
+     RCV RCV-0003: match=yes, c_dmg=crushing, u_dmg=uncertain, qf=, rcvd=44/48
+     PRP PRP-0003: poly(req=True, obs=not_sealed), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0003: state=signs_of_use, disp=liquidate, miss=, cond=
+[03] FEE-0003-2   | UNIT-0003  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0003: match=yes, c_dmg=crushing, u_dmg=uncertain, qf=, rcvd=44/48
+     PRP PRP-0003: poly(req=True, obs=not_sealed), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0003: state=signs_of_use, disp=liquidate, miss=, cond=
+[04] FEE-0005-1   | UNIT-0005  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0005: match=yes, c_dmg=tears, u_dmg=none, qf=, rcvd=10/12
+     PRP PRP-0005: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[05] FEE-0007-1   | UNIT-0007  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0007: match=no, c_dmg=none, u_dmg=none, qf=wrong_colour, rcvd=24/24
+     PRP PRP-0007: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[06] FEE-0011-1   | UNIT-0011  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0011: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0011: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[07] FEE-0012-1   | UNIT-0012  | fee_report           | fulfilment_fee_weight_tier       | $4.25  | qty=1
+     RCV RCV-0012: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0012: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile, obs=uncertain), exp(req=False, obs=not_required)
+[08] FEE-0013-1   | UNIT-0013  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0013: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=12/12
+     PRP PRP-0013: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[09] FEE-0014-1   | UNIT-0014  | fee_report           | inbound_defect_fee               | $2.00  | qty=1
+     RCV RCV-0014: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0014: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile;this_way_up, obs=all_present), exp(req=False, obs=not_required)
+     RTN RTN-0014: state=signs_of_use, disp=liquidate, miss=, cond=
+[10] FEE-0014-2   | UNIT-0014  | inventory_adjustment | lost_inbound                     | $0.00  | qty=2
+     RCV RCV-0014: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0014: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile;this_way_up, obs=all_present), exp(req=False, obs=not_required)
+     RTN RTN-0014: state=signs_of_use, disp=liquidate, miss=, cond=
+[11] FEE-0014-3   | UNIT-0014  | fee_report           | fulfilment_fee_weight_tier       | $4.75  | qty=1
+     RCV RCV-0014: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0014: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile;this_way_up, obs=all_present), exp(req=False, obs=not_required)
+     RTN RTN-0014: state=signs_of_use, disp=liquidate, miss=, cond=
+[12] FEE-0014-4   | UNIT-0014  | fee_report           | refund_issued_item_not_returned  | $0.00  | qty=1
+     RCV RCV-0014: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0014: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile;this_way_up, obs=all_present), exp(req=False, obs=not_required)
+     RTN RTN-0014: state=signs_of_use, disp=liquidate, miss=, cond=
+[13] FEE-0015-1   | UNIT-0015  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0015: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=12/12
+     PRP PRP-0015: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile, obs=some_missing), exp(req=False, obs=not_required)
+[14] FEE-0018-1   | UNIT-0018  | fee_report           | inbound_defect_fee               | $1.00  | qty=1
+     RCV RCV-0018: match=yes, c_dmg=none, u_dmg=none, qf=obvious_defect, rcvd=48/48
+     PRP PRP-0018: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0018: state=factory_sealed, disp=restock, miss=, cond=
+[15] FEE-0018-2   | UNIT-0018  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0018: match=yes, c_dmg=none, u_dmg=none, qf=obvious_defect, rcvd=48/48
+     PRP PRP-0018: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0018: state=factory_sealed, disp=restock, miss=, cond=
+[16] FEE-0024-1   | UNIT-0024  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0024: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=12/12
+     PRP PRP-0024: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[17] FEE-0025-1   | UNIT-0025  | fee_report           | fulfilment_fee_weight_tier       | $4.25  | qty=1
+     RCV RCV-0025: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=18/24
+     PRP PRP-0025: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[18] FEE-0026-1   | UNIT-0026  | fee_report           | inbound_defect_fee               | $1.00  | qty=1
+     RCV RCV-0026: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=48/48
+     PRP PRP-0026: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[19] FEE-0030-1   | UNIT-0030  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0030: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=12/12
+     PRP PRP-0030: poly(req=True, obs=yes), suff(req=True, obs=obscured_by_fold), fnsku=missing, orig_cov=yes, hnd(req=liquid;this_way_up, obs=uncertain), exp(req=True, obs=legible)
+     RTN RTN-0030: state=opened_unused, disp=restock, miss=, cond=
+[20] FEE-0031-1   | UNIT-0031  | inventory_adjustment | lost_inbound                     | $0.00  | qty=1
+     RCV RCV-0031: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=48/48
+     PRP PRP-0031: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[21] FEE-0031-2   | UNIT-0031  | fee_report           | fulfilment_fee_weight_tier       | $4.25  | qty=1
+     RCV RCV-0031: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=48/48
+     PRP PRP-0031: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[22] FEE-0035-1   | UNIT-0035  | fee_report           | inbound_defect_fee               | $0.50  | qty=1
+     RCV RCV-0035: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0035: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=uncertain, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[23] FEE-0035-2   | UNIT-0035  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0035: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0035: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=uncertain, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[24] FEE-0036-1   | UNIT-0036  | fee_report           | fulfilment_fee_weight_tier       | $4.25  | qty=1
+     RCV RCV-0036: match=yes, c_dmg=crushing, u_dmg=none, qf=, rcvd=11/12
+     PRP PRP-0036: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0036: state=opened_unused, disp=restock, miss=, cond=
+[25] FEE-0038-1   | UNIT-0038  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0038: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=12/12
+     PRP PRP-0038: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=uncertain, orig_cov=yes, hnd(req=, obs=not_required), exp(req=True, obs=legible)
+     RTN RTN-0038: state=opened_unused, disp=restock, miss=tub, cond=
+[26] FEE-0038-2   | UNIT-0038  | fee_report           | refund_issued_item_not_returned  | $0.00  | qty=1
+     RCV RCV-0038: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=12/12
+     PRP PRP-0038: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=uncertain, orig_cov=yes, hnd(req=, obs=not_required), exp(req=True, obs=legible)
+     RTN RTN-0038: state=opened_unused, disp=restock, miss=tub, cond=
+[27] FEE-0039-1   | UNIT-0039  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0039: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0039: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=liquid;this_way_up, obs=all_present), exp(req=True, obs=legible)
+     RTN RTN-0039: state=damaged, disp=liquidate, miss=, cond=
+[28] FEE-0041-1   | UNIT-0041  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0041: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=6/6
+     PRP PRP-0041: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=uncertain, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0041: state=damaged, disp=liquidate, miss=, cond=
+[29] FEE-0041-2   | UNIT-0041  | fee_report           | refund_issued_item_not_returned  | $0.00  | qty=1
+     RCV RCV-0041: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=6/6
+     PRP PRP-0041: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=uncertain, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0041: state=damaged, disp=liquidate, miss=, cond=
+[30] FEE-0042-1   | UNIT-0042  | fee_report           | fulfilment_fee_weight_tier       | $4.25  | qty=1
+     RCV RCV-0042: match=yes, c_dmg=water, u_dmg=uncertain, qf=, rcvd=12/12
+     PRP PRP-0042: poly(req=True, obs=uncertain), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[31] FEE-0048-1   | UNIT-0048  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0048: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=48/48
+     PRP PRP-0048: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile, obs=all_present), exp(req=False, obs=not_required)
+     RTN RTN-0048: state=factory_sealed, disp=restock, miss=, cond=
+[32] FEE-0048-2   | UNIT-0048  | fee_report           | refund_issued_item_not_returned  | $0.00  | qty=1
+     RCV RCV-0048: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=48/48
+     PRP PRP-0048: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile, obs=all_present), exp(req=False, obs=not_required)
+     RTN RTN-0048: state=factory_sealed, disp=restock, miss=, cond=
+[33] FEE-0050-1   | UNIT-0050  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0050: match=yes, c_dmg=tears, u_dmg=crushing, qf=, rcvd=96/96
+     PRP PRP-0050: poly(req=True, obs=yes), suff(req=True, obs=uncertain), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0050: state=signs_of_use, disp=refurbish, miss=poster, cond=
+[34] FEE-0051-1   | UNIT-0051  | fee_report           | fulfilment_fee_weight_tier       | $5.50  | qty=1
+     RCV RCV-0051: match=yes, c_dmg=uncertain, u_dmg=none, qf=, rcvd=18/24
+     PRP PRP-0051: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[35] FEE-0052-1   | UNIT-0052  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0052: match=yes, c_dmg=tears, u_dmg=none, qf=, rcvd=24/48
+     PRP PRP-0052: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[36] FEE-0061-1   | UNIT-0061  | fee_report           | inbound_defect_fee               | $2.00  | qty=1
+     RCV RCV-0061: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0061: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=True, obs=legible)
+[37] FEE-0061-2   | UNIT-0061  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0061: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0061: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=True, obs=legible)
+[38] FEE-0063-1   | UNIT-0063  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0063: match=yes, c_dmg=water, u_dmg=none, qf=, rcvd=12/12
+     PRP PRP-0063: poly(req=True, obs=yes), suff(req=True, obs=uncertain), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[39] FEE-0064-1   | UNIT-0064  | inventory_adjustment | lost_inbound                     | $0.00  | qty=1
+     RCV RCV-0064: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=44/48
+     PRP PRP-0064: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=no, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0064: state=factory_sealed, disp=restock, miss=, cond=
+[40] FEE-0064-2   | UNIT-0064  | fee_report           | fulfilment_fee_weight_tier       | $4.25  | qty=1
+     RCV RCV-0064: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=44/48
+     PRP PRP-0064: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=no, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0064: state=factory_sealed, disp=restock, miss=, cond=
+[41] FEE-0065-1   | UNIT-0065  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0065: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=6/6
+     PRP PRP-0065: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=no, hnd(req=fragile;this_way_up, obs=all_present), exp(req=False, obs=not_required)
+[42] FEE-0071-1   | UNIT-0071  | fee_report           | inbound_defect_fee               | $1.00  | qty=1
+     RCV RCV-0071: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=48/48
+     PRP PRP-0071: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[43] FEE-0071-2   | UNIT-0071  | reimbursement_report | damaged_in_warehouse             | $14.00 | qty=1
+     RCV RCV-0071: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=48/48
+     PRP PRP-0071: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[44] FEE-0071-3   | UNIT-0071  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0071: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=48/48
+     PRP PRP-0071: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[45] FEE-0073-1   | UNIT-0073  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0073: match=uncertain, c_dmg=none, u_dmg=none, qf=, rcvd=48/48
+     PRP PRP-0073: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[46] FEE-0074-1   | UNIT-0074  | fee_report           | inbound_defect_fee               | $0.50  | qty=1
+     RCV RCV-0074: match=uncertain, c_dmg=crushing, u_dmg=uncertain, qf=, rcvd=24/24
+     PRP PRP-0074: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[47] FEE-0074-2   | UNIT-0074  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0074: match=uncertain, c_dmg=crushing, u_dmg=uncertain, qf=, rcvd=24/24
+     PRP PRP-0074: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[48] FEE-0076-1   | UNIT-0076  | inventory_adjustment | lost_inbound                     | $0.00  | qty=1
+     RCV RCV-0076: match=yes, c_dmg=none, u_dmg=none, qf=obvious_defect, rcvd=12/12
+     PRP PRP-0076: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=uncertain, orig_cov=yes, hnd(req=fragile;this_way_up, obs=all_present), exp(req=False, obs=not_required)
+[49] FEE-0076-2   | UNIT-0076  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0076: match=yes, c_dmg=none, u_dmg=none, qf=obvious_defect, rcvd=12/12
+     PRP PRP-0076: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=uncertain, orig_cov=yes, hnd(req=fragile;this_way_up, obs=all_present), exp(req=False, obs=not_required)
+[50] FEE-0077-1   | UNIT-0077  | fee_report           | fulfilment_fee_weight_tier       | $4.25  | qty=1
+     RCV RCV-0077: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0077: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile;this_way_up, obs=all_present), exp(req=False, obs=not_required)
+[51] FEE-0081-1   | UNIT-0081  | fee_report           | fulfilment_fee_weight_tier       | $4.25  | qty=1
+     RCV RCV-0081: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=6/12
+     PRP PRP-0081: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=True, obs=uncertain)
+     RTN RTN-0081: state=opened_unused, disp=restock, miss=, cond=
+[52] FEE-0084-1   | UNIT-0084  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0084: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=6/6
+     PRP PRP-0084: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[53] FEE-0085-1   | UNIT-0085  | fee_report           | fulfilment_fee_weight_tier       | $4.25  | qty=1
+     RCV RCV-0085: match=yes, c_dmg=none, u_dmg=none, qf=missing_components, rcvd=12/12
+     PRP PRP-0085: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[54] FEE-0090-1   | UNIT-0090  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0090: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=24/24
+     PRP PRP-0090: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile, obs=all_present), exp(req=False, obs=not_required)
+[55] FEE-0092-1   | UNIT-0092  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0092: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=12/12
+     PRP PRP-0092: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=liquid;this_way_up, obs=all_present), exp(req=True, obs=legible)
+     RTN RTN-0092: state=uncertain, disp=pending_review, miss=dropper, cond=
+[56] FEE-0093-1   | UNIT-0093  | fee_report           | fulfilment_fee_weight_tier       | $5.10  | qty=1
+     RCV RCV-0093: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=22/24
+     PRP PRP-0093: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile, obs=uncertain), exp(req=False, obs=not_required)
+     RTN RTN-0093: state=damaged, disp=liquidate, miss=, cond=
+[57] FEE-0094-1   | UNIT-0094  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0094: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=96/96
+     PRP PRP-0094: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=missing, orig_cov=yes, hnd(req=fragile, obs=all_present), exp(req=False, obs=not_required)
+[58] FEE-0095-1   | UNIT-0095  | fee_report           | inbound_defect_fee               | $0.50  | qty=1
+     RCV RCV-0095: match=yes, c_dmg=crushing, u_dmg=water, qf=, rcvd=24/24
+     PRP PRP-0095: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile, obs=all_present), exp(req=False, obs=not_required)
+[59] FEE-0095-2   | UNIT-0095  | fee_report           | fulfilment_fee_weight_tier       | $6.35  | qty=1
+     RCV RCV-0095: match=yes, c_dmg=crushing, u_dmg=water, qf=, rcvd=24/24
+     PRP PRP-0095: poly(req=False, obs=not_required), suff(req=False, obs=not_required), fnsku=flat, orig_cov=yes, hnd(req=fragile, obs=all_present), exp(req=False, obs=not_required)
+[60] FEE-0096-1   | UNIT-0096  | fee_report           | inbound_defect_fee               | $2.00  | qty=1
+     RCV RCV-0096: match=yes, c_dmg=none, u_dmg=none, qf=missing_components, rcvd=48/48
+     PRP PRP-0096: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=uncertain, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+[61] FEE-0099-1   | UNIT-0099  | fee_report           | fulfilment_fee_weight_tier       | $3.50  | qty=1
+     RCV RCV-0099: match=yes, c_dmg=none, u_dmg=none, qf=, rcvd=12/12
+     PRP PRP-0099: poly(req=True, obs=yes), suff(req=True, obs=legible), fnsku=flat, orig_cov=yes, hnd(req=, obs=not_required), exp(req=False, obs=not_required)
+     RTN RTN-0099: state=damaged, disp=dispose, miss=, cond=

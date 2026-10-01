@@ -1,0 +1,9 @@
+pg_dump unavailable; database-side CREATE TABLE AS TABLE fallback
+2026-10-01T10:08:08.388111+00:00
+shipments: backup=shipments_bak_pre005, rows=13
+orders: backup=orders_bak_pre005, rows=28
+charges: backup=charges_bak_pre005, rows=48
+evidence: backup=evidence_bak_pre005, rows=219
+reimbursements: backup=reimbursements_bak_pre005, rows=3
+claims: backup=claims_bak_pre005, rows=2
+claim_evidence: backup=claim_evidence_bak_pre005, rows=4

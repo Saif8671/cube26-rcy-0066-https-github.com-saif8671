@@ -1,0 +1,3 @@
+charge_id,amount,charge_type,charge_date
+CHG-UPLOAD-DEMO-01,55.00,Weight discrepancy surcharge,2026-03-01T10:00:00Z
+CHG-UPLOAD-DEMO-02,75.00,Unplanned prep - Barcode relabeling,2026-03-02T11:00:00Z

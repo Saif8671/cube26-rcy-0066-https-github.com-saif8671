@@ -1,0 +1,25 @@
+[
+  {
+    "charge_id": "CHG-TEST-JSON-01",
+    "shipment_id": "FBA17Z88Y14",
+    "sku": "TECH-HUB-03",
+    "asin": "B09V3K4M2L",
+    "charge_type": "Prep fee - Bagging required",
+    "amount": "40.00",
+    "currency": "USD",
+    "charge_date": "2026-03-16T09:00:00Z",
+    "source_report": "prep_fees_2026_03.json"
+  },
+  {
+    "charge_id": "CHG-TEST-JSON-02",
+    "shipment_id": "FBA17Z88Y12",
+    "order_id": "111-2000001-0000001",
+    "sku": "TECH-CABLE-01",
+    "asin": "B08N5WRWNW",
+    "charge_type": "Box dimension surcharge",
+    "amount": "18.25",
+    "currency": "USD",
+    "charge_date": "2026-03-16T14:15:00Z",
+    "source_report": "prep_fees_2026_03.json"
+  }
+]

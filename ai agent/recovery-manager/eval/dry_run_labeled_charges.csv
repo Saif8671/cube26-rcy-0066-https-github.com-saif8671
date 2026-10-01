@@ -1,0 +1,13 @@
+charge_id,ground_truth_verdict,notes
+CHG-FBA-8901,NOT_ELIGIBLE,Legitimate defect fee per dock photo audit; vendor carton torn
+CHG-FBA-8902,CLAIM_ELIGIBLE,Internal scale audit EVD-SCALE-4412 recorded net weight 4.09 lb refuting carrier 4.2 lb tier
+CHG-FBA-8903,NOT_ELIGIBLE,Absence of proof; no dock/prep logs exist
+CHG-FBA-8904,NOT_ELIGIBLE,Ambiguous conflict between pack station and dock arrival logs; uncertain
+FEE-0002-1,NOT_ELIGIBLE,Fee matches tier specifications; insufficient operational evidence
+FEE-0003-1,NOT_ELIGIBLE,Lost inbound zero charge amount; non-recoverable
+FEE-0003-2,CLAIM_ELIGIBLE,Inbound scale log shows 1.1 lb while billed tier is 2.5 lb
+FEE-0005-1,NOT_ELIGIBLE,Billed weight tier matches scale readings
+FEE-0007-1,NOT_ELIGIBLE,Operational records align with marketplace fee
+FEE-0011-1,NOT_ELIGIBLE,Fee supported by dimension scanning; no dispute
+FEE-0012-1,CLAIM_ELIGIBLE,Carrier claimed missing barcode but receiving scan recorded valid barcode
+FEE-0014-1,NOT_ELIGIBLE,Prep taping fee justified by unsealed carton inspection photo

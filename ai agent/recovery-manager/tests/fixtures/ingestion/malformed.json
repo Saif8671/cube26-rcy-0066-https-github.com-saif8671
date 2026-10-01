@@ -1,0 +1,5 @@
+[
+  {
+    "charge_id": "CHG-BROKEN",
+    "amount": 25.00,
+    "charge_type": "Corrupt row"

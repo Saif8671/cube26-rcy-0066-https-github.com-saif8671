@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  /* Amazon-inspired Light Brand Palette */
+  --bg-main: #FFFFFF;
+  --bg-subtle: #F9FAFB;
+  --bg-panel: #FFFFFF;
+  --bg-muted: #F3F4F6;
+
+  --border-light: #E5E7EB;
+  --border-subtle: #E2E8F0;
+
+  --text-primary: #131921;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+
+  --amazon-orange: #FF9900;
+  --amazon-orange-hover: #E88A00;
+  --amazon-orange-glow: rgba(255, 153, 0, 0.2);
+
+  --background: #FFFFFF;
+  --foreground: #131921;
+}
+
+@theme {
+  --color-amazon-orange: #FF9900;
+  --color-amazon-orange-hover: #E88A00;
+  --color-amazon-navy: #131921;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
