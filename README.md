@@ -3,8 +3,10 @@
 ## 🚀 Quick Links
 
 - **[Live Demo](https://drive.google.com/file/d/1LYr5SKXqVaxu1VFnNfTytmMq4N3nz-ep/view?usp=drivesdk)** – Try the full application with sample data
-- **[Deployed Application](https://recovery-manager.fly.dev/)** – Production-ready instance
+- **[Frontend (Vercel)](https://cube26-rcy-0066-https-github-com-saif8671-qy5tybcok.vercel.app)** – Frontend dashboard deployed on Vercel
+- **[Deployed Application](https://recovery-manager.fly.dev/)** – Production-ready backend instance
 - **[API Documentation](https://recovery-manager.fly.dev/docs)** – Interactive Swagger/OpenAPI docs
+- **[LinkedIn Post](https://lnkd.in/p/gshphDqH)** – Project announcement and details
 
 ---
 
@@ -100,10 +102,12 @@ Fee / Discrepancy Report
   - [TypeScript](https://www.typescriptlang.org/)
   - [Tailwind CSS](https://tailwindcss.com/)
   - [shadcn/ui](https://ui.shadcn.com/) & [Lucide Icons](https://lucide.dev/)
+  - **Deployed on:** [Vercel](https://vercel.com/)
 - **Backend:**
   - [FastAPI](https://fastapi.tiangolo.com/) (Python 3.11+, asynchronous ASGI)
   - [SQLAlchemy 2.0](https://www.sqlalchemy.org/) (declarative ORM)
   - [Pydantic v2](https://docs.pydantic.dev/) (strict request/response validation)
+  - **Deployed on:** [Fly.io](https://fly.io/)
 - **Database & Storage:**
   - [PostgreSQL 15+](https://www.postgresql.org/) / [Supabase](https://supabase.com/)
   - Row Level Security (`FORCE ROW LEVEL SECURITY`)
@@ -173,7 +177,7 @@ The system synthesizes operational evidence emitted by the four upstream pods:
 - **False Positives (FP):** **0** (Zero hallucinated or invalid claims filed)
 - **False Negatives (FN):** **2** (Eligible claims missed due to conservative default)
 - **True Negatives (TN):** **9** (Correctly held as SILENT / SUPPORTED / UNCERTAIN)
-- **Accuracy:** **83.3%}
+- **Accuracy:** **83.3%**
 
 ### Statistical Significance Caveat
 Because this dry run evaluated a small 12-unit sample containing only 1 positive prediction, the **100% precision figure is not statistically significant on its own**. The **33.3% recall** and the two false negatives show the system is conservative but not fully comprehensive.
@@ -199,7 +203,7 @@ In compliance with `RULES.md` honesty rules, the following system limitations ar
 
 ### Backend Setup
 ```bash
-cd backend
+cd ai-agent/recovery-manager/backend
 python -m venv venv
 venv\Scripts\activate      # Windows
 pip install -r requirements.txt
@@ -208,10 +212,29 @@ uvicorn app.main:app --reload --port 8000
 
 ### Frontend Setup
 ```bash
-cd frontend
+cd ai-agent/recovery-manager/frontend
 npm install
 npm run dev               # Runs on http://localhost:3000
 ```
+
+---
+
+## 10. Deployment
+
+### Frontend (Vercel)
+The frontend is automatically deployed to Vercel at:
+- **URL:** https://cube26-rcy-0066-https-github-com-saif8671-qy5tybcok.vercel.app
+- **Root Directory:** `ai-agent/recovery-manager/frontend`
+- **Framework:** Next.js
+- **Environment Variables:**
+  - `NEXT_PUBLIC_API_URL=https://recovery-manager.fly.dev`
+
+### Backend (Fly.io)
+The backend is deployed on Fly.io at:
+- **URL:** https://recovery-manager.fly.dev
+- **API Docs:** https://recovery-manager.fly.dev/docs
+
+---
 
 ## Known limits
 
